@@ -674,14 +674,14 @@ bool loadMedia()
 	bool success = true;
 
 	//Load board texture
-	if( !gBoardTexture.loadFromFile( "Connect4Board.png" ) )
+	if( !gBoardTexture.loadFromFile( "assets/Connect4Board.png" ) )
 	{
 		printf( "Failed to load sprite sheet texture!\n" );
 		success = false;
 	}
 
     //Open the font
-    gFont = TTF_OpenFont( "04B_30__.ttf", 28 );
+    gFont = TTF_OpenFont( "assets/04B_30__.ttf", 28 );
     if( gFont == NULL )
     {
         printf( "Failed to load font! SDL_ttf Error: %s\n", TTF_GetError() );
@@ -713,7 +713,7 @@ bool loadMedia()
     }
 
 	//Load sprite sheet texture
-	if( !gSpriteSheetTexture.loadFromFile( "Connect4Tokens.png" ) )
+	if( !gSpriteSheetTexture.loadFromFile( "assets/Connect4Tokens.png" ) )
 	{
 		printf( "Failed to load sprite sheet texture!\n" );
 		success = false;
